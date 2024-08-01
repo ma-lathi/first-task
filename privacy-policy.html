@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roof Garden</title>
+   <link rel="stylesheet" href="src/output.css">
+   <link
+   rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+  />
+    <style>
+        /* Style for fixed background shapes */
+        @keyframes fade-in {
+   
+   
+   0% {
+       opacity: 0;
+       transform: translateY(30px);
+   }
+   100% {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+
+.animate-fade-in {
+   animation: fade-in 0.8s ease-in-out;
+}
+html{
+   scroll-behavior: smooth;
+}
+#a{
+     width: 500px;
+     height: 500px;
+     border-radius: 50%;
+   }
+       
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 animate-fade-in">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="thank-your-garden-logo.webp" class="h-15" alt="Garden theme">
+          </a>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <a href="contact.html"> <button type="button" class="  text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Contact Us</button></a>
+            <button type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false" onclick="toggleMenu()">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+            </button>
+          </div>
+          <div id="navbar-sticky" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="index.html#our-service" class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Our Services</a>
+              </li>
+              <li>
+                <a href="index.html#showcase" class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Showcases</a>
+              </li>
+              <li>
+                <a href="index.html#features-benefits" class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Features & Benefits</a>
+              </li>
+              <li>
+                <a href="index.html#contact" class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <script>
+        function toggleMenu() {
+          const menu = document.getElementById('navbar-sticky');
+          const expanded = menu.getAttribute('aria-expanded') === 'true' || false;
+          menu.setAttribute('aria-expanded', !expanded);
+          menu.classList.toggle('hidden');
+        }
+      </script>
+      
+      
+      <!-- privacy &policy section -->
+<section id="introduction" aria-label="Introduction" class="pb-16 pt-20 sm:pb-20 md:pt-36 lg:py-32 animate-fade-in">
+    <div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:max-w-4xl lg:px-12 text-lg tracking-tight text-slate-700">
+        <p class="font-display text-4xl font-bold tracking-tight text-slate-900 mt-10" >Privacy & Policy</p>
+        <p class="mt-4">List the types of personal information you collect (e.g., name, email, phone number).
+            <br>Clarify how you collect information (e.g., directly from visitors, through cookies).</p>
+        <ul role="list" class="mt-8 space-y-3">
+            <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-blue-500">
+                <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path></svg>
+                <span class="ml-4">Explain the purposes for which you use personal information (e.g., communication, bookings, marketing).</span>
+            </li>
+            <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-blue-500">
+                <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path></svg>
+                <span class="ml-4">Mention any automated processing or profiling, if applicable.</span>
+            </li>
+            <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-blue-500">
+                    <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path></svg>
+                    <span class="ml-4">Outline the legal grounds on which you process personal information (e.g., consent, legitimate interests).</span>
+            </li>
+            <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-blue-500">
+                <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path></svg>
+                <span class="ml-4">Describe circumstances under which you may share personal information (e.g., with service providers, legal requirements).</span>
+            </li>
+            <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-blue-500">
+                <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path></svg>
+                <span class="ml-4">Detail security measures implemented to protect personal information (e.g., encryption, access controls).</span>
+            </li>
+            <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-blue-500">
+                <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path></svg>
+                <span class="ml-4">Specify how long you retain personal information and the criteria used for retention periods.</span>
+            </li>
+            <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-blue-500">
+                <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path></svg>
+                <span class="ml-4">Inform visitors about their rights regarding their personal information (e.g., access, correction, deletion).</span>
+            </li>
+            <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-blue-500">
+                <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path></svg>
+                <span class="ml-4">Explain how you handle marketing communications and individuals' preferences.</span>
+            </li>
+            <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-blue-500">
+                <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path></svg>
+                <span class="ml-4">Provide information on your use of cookies, tracking technologies, and how visitors can manage their preferences.</span>
+            </li>
+            <li class="flex"><svg aria-hidden="true" viewBox="0 0 32 32" class="h-8 w-8 flex-none fill-blue-500">
+                <path d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"></path></svg>
+                <span class="ml-4">State your policy on updating the privacy policy and notify visitors of material changes.</span>
+            </li>
+            </ul>
+           </div>
+        </section>
+<!-- footer section -->
+<footer class="animate-fade-in  bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br"  >
+  <div class="mx-auto w-full max-w-screen-xl">
+    <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+      <div>
+          <img src="thank-your-garden-logo.webp" alt="" ><br>
+          <p> A roof garden transforms an often underutilized space atop a building into a vibrant, functional area. </p> <br>
+          <ul class="text-black dark:text-black font-medium">
+              <li class="mb-4">
+                  <a href="#" class=" hover:underline"><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
+                  <a href="#" class=" hover:underline"><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;
+                  <a href="#" class=" hover:underline"><i class="bi bi-twitter"></i></a>&nbsp;&nbsp;
+                  <a href="#" class=" hover:underline"><i class="bi bi-youtube"></i></a>
+              </li>
+             
+          </ul>
+      </div>
+      <div>
+          <h2 class="mb-6 text-sm font-semibold text-black uppercase ">Contact Us</h2>
+          <ul class="text-black  font-medium">
+              <li class="mb-4">
+                  <a href="#" class="">Phone:080722 45806</a>
+              </li>
+              <li class="mb-4">
+                  <a href="#" class="">Email:roofgardeninfo@gmail.com</a>
+              </li>
+              <li class="mb-4">
+                  <a href="#" class=""><Address>Address:301 Third floor, Real Enclave, Josier St, Tirumurthy Nagar, Nungambakkam, Chennai, Tamil Nadu 600034</Address></a>
+              </li>
+              <li class="mb-4">
+                  <a href="#" class="">Time:Mon-Sat(10am-pm) Sun closed  </a>
+              </li>
+          </ul>
+      </div>
+      <div>
+          <h2 class="mb-6 text-sm font-semibold text-black uppercase ">Resources</h2>
+          <ul class="text-black  font-medium">
+              <li class="mb-4">
+                  <a href="index.html#home" class="hover:underline"> <i class="bi bi-caret-right-fill"></i>Home</a>
+              </li>
+              <li class="mb-4">
+                  <a href="index.html#our-service" class="hover:underline"><i class="bi bi-caret-right-fill"></i>Our Services</a>
+              </li>
+              <li class="mb-4">
+                  <a href="showcase.html" class="hover:underline"><i class="bi bi-caret-right-fill"></i>Showcases</a>
+              </li>
+              <li class="mb-4">
+                  <a href="index.html#features-benefits" class="hover:underline"><i class="bi bi-caret-right-fill"></i>Features & Benefits</a>
+              </li>
+              <li class="mb-4">
+                  <a href="contact.html" class="hover:underline"><i class="bi bi-caret-right-fill"></i>Contacts</a>
+              </li>
+          </ul>
+      </div>
+      <div>
+          <h2 class="mb-6 text-sm font-semibold text-black uppercase ">Get free Estimate</h2>
+          <ul class="text-black  font-medium">
+              <li class="mb-4">
+                  
+                    <p><i class="bi bi-telephone-fill"></i>080722 45806</p>
+                      
+              </li>
+              <li class="mb-4">
+                Contact us now for a quote on your garden ( We are Support 24/7 )
+              </li>
+              
+             
+          </ul>
+      </div>
+  </div>
+  <div class="px-4 py-6   md:flex md:items-center md:justify-between">
+      <span class="text-sm text-black sm:text-center">© 2024 <a href="">Roof Garden designed by adsyzygy pvt ltd</a>. All Rights Reserved.
+      </span>
+      <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+          <a href="#" class="text-black hover:text-black ">
+                Sitemap
+            </a>
+            <a href="#" class="text-black hover:text-black ">
+              <i class="bi bi-dot"></i>Privacy-Policy
+               
+            </a>
+            <a href="#" class="text-black hover:text-black ">
+              <i class="bi bi-dot"></i>Terms-condition
+            </a>
+           
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

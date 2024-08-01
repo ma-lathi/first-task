@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roof Garden</title>
+   <link rel="stylesheet" href="src/output.css">
+   <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+   />
+    <style>
+       
+    /* Define custom animation classes */
+   /* Inside your CSS file */
+@keyframes fade-in {
+   
+   
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.8s ease-in-out;
+}
+html{
+    scroll-behavior: smooth;
+}
+ 
+  @keyframes wobbleVertical {
+    0% {
+      transform: translateY(0);
+    }
+    15% {
+      transform: translateY(-10px);
+    }
+    30% {
+      transform: translateY(10px);
+    }
+    45% {
+      transform: translateY(-5px);
+    }
+    60% {
+      transform: translateY(5px);
+    }
+    75% {
+      transform: translateY(-2px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+ .wobble-vertical{
+    animation: wobbleVertical 1s ease-in-out;
+  }
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .zoom-in-out:hover{
+    animation: zoomInOut 0.6s ease-in-out;
+  }
+    </style>
+ 
+</head>
+
+<body class="animate-fade-in">
+
+
+    <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="thank-your-garden-logo.webp" class="h-15" alt="Garden theme">
+          </a>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+           <a href="contact.html"> <button type="button" class="  text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Contact Us</button></a>
+            <button type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false" onclick="toggleMenu()">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+            </button>
+          </div>
+          <div id="navbar-sticky" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
+              <li>
+                <a href="#home" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="#our-service" class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Our Services</a>
+              </li>
+              <li>
+                <a href="showcase.html" class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Showcases</a>
+              </li>
+              <li>
+                <a href="#features-benefits" class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Features & Benefits</a>
+              </li>
+              <li>
+                <a href="contact.html"  target="_blank"  class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <script>
+        function toggleMenu() {
+          const menu = document.getElementById('navbar-sticky');
+          const expanded = menu.getAttribute('aria-expanded') === 'true' || false;
+          menu.setAttribute('aria-expanded', !expanded);
+          menu.classList.toggle('hidden');
+        }
+      </script>
+      
+      
+     
+    <!-- Main Content Section -->
+    <div class="relative flex flex-col items-center max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 p-8 animate-pulse "  id="home">
+      <div class="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10  wobble-vertical ">
+          <div class="text-left">
+              <h2 class="text-4xl font-extrabold  text-center   leading-10 tracking-tight text-black-800 sm:text-5xl sm:leading-none md:text-6xl">
+                  Welcome to The Rooftop Garden
+                  <!-- <span class="font-bold text-blue-500"></span>
+                  <span class="text-xl font-semibold rounded-full text-blueGray-500">2.0</span> -->
+              </h2>
+              <p class="max-w-md mx-auto mt-3 text-center text-black sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">Discover the beauty and serenity of our rooftop
+                  garden,<br> where nature meets urban living. Enjoy fresh air, green spaces, and breathtaking views
+                  right in the heart of the city.
+              </p>
+              <div class="mt-10 flex items-center justify-center gap-x-6">
+                  <a href="#our-service" class="   rounded-md  bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"> Get Started</a>
+                  <a href="contact.html" class="text-sm font-semibold leading-6 text-black">Contact Us <span aria-hidden="true">→</span></a>
+              </div>
+          </div>
+      </div> <br>
+      <div class="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pl-10  wobble-vertical zoom-in-out">
+          <div class="relative w-full p-3 rounded  md:p-8">
+              <div class="rounded-lg bg-white text-black w-full">
+                  <img src="Peace-Lily.jpg"  alt="home paga " class="rounded-full">
+              </div>
+          </div>
+      </div>
+  </div>
+
+            <!-- Main Heading -->
+        
+        <!-- Background Shapes -->
+        <div class="absolute inset-x-0 bottom-0 -z-10 transform-gpu overflow-hidden blur-3xl">
+            <div class="left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Background Shapes -->
+    <div class="absolute inset-x-0 bottom-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl">
+        <div class="left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div>
+
+   
+    
+<!-- our service -->
+ 
+<div class="max-w-7xl mx-auto my-8 px-2 ">
+    
+  <h2 class="mb-1 text-3xl font-extrabold leading-tight text-black text-center mt-10 animate-fade-in" id="our-service"> Our Services </h2>
+
+
+  <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 p-2 xl:p-5">
+      <li class=" relative bg-white flex flex-col  border rounded shadow-md hover:shadow-primary-400 transition-all duration-500 ease-in-out transform hover:scale-105">
+
+          <a class="relative" href="#home">
+              <div class="relative w-full aspect-video ">
+                  <img class="rounded w-full h-full object-cover"
+                      src="design.jpg" alt="design" loading="lazy">
+
+                  <div
+                      class="absolute bottom-0 left-0 right-0 p-4 bg-transparent text-black">
+                      <h2 class="text-xl font-semibold">Design</h2>
+                      <!-- <p class="font-medium text-sm">Most advanced language A.I</p> -->
+                  </div>
+              </div>
+          </a>
+
+          <div class="flex flex-col justify-between  px-4 py-2">
+
+              <p class="text-black-600 two-lines">
+                  We tailor each rooftop garden to suit your unique space and preferences. From conceptualization to detailed planning, our designers ensure your garden complements your building's architecture and meets your aesthetic goals.
+              </p>
+
+             
+      </li>
+
+      <li class="relative bg-white flex flex-col border rounded shadow-md hover:shadow-primary-400 transition-all duration-500 ease-in-out transform hover:scale-105">
+          <a class="relative" href="#home">
+              <div class="relative w-full aspect-video">
+                  <img class="rounded w-full h-full object-cover"
+                      src="maintaince.jpg" alt="maintaince" loading="lazy">
+                  <div
+                      class="absolute bottom-0 left-0 right-0 p-4 bg-transparent text-white">
+                      <h2 class="text-xl font-semibold">Maintenance</h2>
+                      <!-- <p class="font-medium text-sm">AI Writer - Content Writing Assistant &amp; Creator</p> -->
+                  </div>
+              </div>
+          </a>
+
+
+          <div class="flex flex-col justify-beetween gap-3 px-4 py-2">
+
+              <p class="text-black-600 two-lines">
+                  Keeping your rooftop garden thriving is our priority. Our maintenance services include regular watering, fertilization, pruning, and pest control. We also offer seasonal planting updates and ongoing care to preserve the beauty of your garden throughout the year.
+              </p>
+
+             
+
+      </li>
+
+      <li class=" relative bg-white flex flex-col  border rounded shadow-md hover:shadow-primary-400 transition-all duration-500 ease-in-out transform hover:scale-105">
+          <a class="relative" href="#home">
+              <div class="relative w-full aspect-video">
+                  <img class="rounded w-full h-full object-cover"
+                      src="functional.jpg" alt="functional" loading="lazy">
+                  <div
+                      class="absolute bottom-0 left-0 right-0 p-4 bg-transparent text-black">
+                      <h2 class="text-xl font-semibold">Functional Layouts</h2>
+                      <!-- <p class="font-medium text-sm">Your Social Media Superhero</p> -->
+                  </div>
+              </div>
+          </a>
+
+
+          <div class="flex flex-col justify-beetween gap-3 px-4 py-2">
+
+              <p class="text-black-600 two-lines">
+                   Intimate seating arrangements surrounded by lush greenery, providing a peaceful escape.Incorporating soft lighting options to create a soothing atmosphere during evening hours.
+                  </p>
+
+              
+      </li>
+
+      <li class="relative bg-white flex flex-col border rounded shadow-md hover:shadow-primary-400 transition-all duration-500 ease-in-out transform hover:scale-105">
+          <a class="relative" href="#home">
+              <div class="relative w-full aspect-video">
+                  <img class="rounded w-full h-full object-cover"
+                      src="water features.jpg" alt="water features" loading="lazy">
+                  <div
+                      class="absolute bottom-0 left-0 right-0 p-4 bg-transparent text-white">
+                      <h2 class="text-xl font-semibold">Water Features</h2>
+                      <!-- <p class="font-medium text-sm">Advanced AI Writing Built for Marketing Results</p> -->
+                  </div>
+              </div>
+          </a>
+
+
+          <div class="flex flex-col justify-beetween gap-3 px-4 py-2">
+              <p class="text-black-600 two-lines">
+                  Adding the gentle sound of flowing water with fountains or small ponds, enhancing the calming effect.A fountain can serve as a focal point and add a soothing sound of flowing water.</p>
+            
+
+             
+      </li>
+
+      <li class="relative bg-white flex flex-col  border rounded shadow-md hover:shadow-primary-400 transition-all duration-500 ease-in-out transform hover:scale-105">
+
+          <a class="relative" href="#home">
+              <div class="relative w-full aspect-video">
+                  <img class="rounded w-full h-full object-cover"
+                      src="ambient.jpg" alt="ambient" loading="lazy">
+                  <div
+                      class="absolute bottom-0 left-0 right-0 p-4 bg-transparent text-white">
+                      <h2 class="text-xl font-semibold">Ambient Lighting</h2>
+                      <!-- <p class="font-medium text-sm">AI Writer for SEO&zwj; That Follows Best Practices</p> -->
+                  </div>
+              </div>
+          </a>
+
+
+          <div class="flex flex-col justify-beetween gap-3 px-4 py-2">
+              <p class="text-black-600 two-lines">
+                  Incorporating soft lighting options to create a soothing atmosphere during evening hours.String lights can add a warm, festive glow to your roof garden.
+              </p>
+
+              
+      </li>
+
+      <li class="relative bg-white flex flex-col  border rounded shadow-md hover:shadow-primary-400 transition-all duration-500 ease-in-out transform hover:scale-105">
+
+          <a class="relative" href="#home">
+              <div class="relative w-full aspect-video">
+                  <img class="rounded w-full h-full object-cover"
+                      src="Aesticintergation.jpg" alt="Aesthetic integration" loading="lazy">
+                  <div
+                      class="absolute bottom-0 left-0 right-0 p-4 bg-transparent text-white">
+                      <h2 class="text-xl font-semibold">Aesthetic Integration</h2>
+                      <!-- <p class="font-medium text-sm">AI Communication Assistant</p> -->
+                  </div>
+              </div>
+          </a>
+
+
+          <div class="flex flex-col justify-beetween gap-3 px-4 py-2">
+              <p class="text-black-600 two-lines">
+                  Designing gardens that complement the lines, materials, and colors of your building facade, ensuring a seamless integration.</p>
+
+             
+
+      </li>
+  </ul>
+
+</div>
+
+
+
+
+
+
+
+<!-- features and benefits -->
+<section class="overflow-hidden bg-white py-8 sm:py-16 animate-fade-in zoom-in-out  ">
+  <h2 class="mb-1 text-3xl font-extrabold leading-tight text-black text-center mt-10 animate-fade-in" id="features-benefits"> Features & Benefits </h2>
+
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 ">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 ">
+      
+      <div class="lg:pr-8 lg:pt-4 ">
+        <div class="lg:max-w-lg  ">
+          <h2 class="text-base font-semibold leading-7 text-indigo-600">Everything you need</h2>
+          <p class="mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl">Features</p>
+          <p class="mt-6 text-lg leading-8 text-black-600">Roof gardens, also known as rooftop gardens or green roofs, offer numerous features and benefits  
+          </p>
+          <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-black-600 lg:max-w-none">
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-black "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                  fill="" aria-hidden="true" class="absolute left-1 top-1 h-5 w-5 text-indigo-600">
+                  <path
+                    d="M3.196 12.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 12.87z">
+                  </path>
+                  <path
+                    d="M3.196 8.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 8.87z">
+                  </path>
+                  <path
+                    d="M10.38 1.103a.75.75 0 00-.76 0l-7.25 4.25a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.76 0l7.25-4.25a.75.75 0 000-1.294l-7.25-4.25z">
+                  </path>
+                </svg>Greenery and Plantings:
+              </dt>
+              <dd class="inline">Roof gardens are characterized by their lush vegetation, including a variety of plants, trees, shrubs, and sometimes even vegetable gardens or herb beds.
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-black">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                  fill="" aria-hidden="true" class="absolute left-1 top-1 h-5 w-5 text-indigo-600">
+                  <path
+                    d="M3.196 12.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 12.87z">
+                  </path>
+                  <path
+                    d="M3.196 8.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 8.87z">
+                  </path>
+                  <path
+                    d="M10.38 1.103a.75.75 0 00-.76 0l-7.25 4.25a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.76 0l7.25-4.25a.75.75 0 000-1.294l-7.25-4.25z">
+                  </path>
+                </svg>
+                Environmental Benefits: 
+              </dt>
+              <dd class="inline">They provide insulation, reducing heating and cooling costs by acting as natural thermal regulators. </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-black"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                  fill="" aria-hidden="true" class="absolute left-1 top-1 h-5 w-5 text-indigo-600">
+                  <path
+                    d="M3.196 12.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 12.87z">
+                  </path>
+                  <path
+                    d="M3.196 8.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 8.87z">
+                  </path>
+                  <path
+                    d="M10.38 1.103a.75.75 0 00-.76 0l-7.25 4.25a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.76 0l7.25-4.25a.75.75 0 000-1.294l-7.25-4.25z">
+                  </path>
+                </svg>Stormwater Management:  </dt>
+              <dd class="inline">Roof gardens absorb rainwater, reducing runoff and alleviating pressure on stormwater systems. 
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-black"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                  fill="" aria-hidden="true" class="absolute left-1 top-1 h-5 w-5 text-indigo-600">
+                  <path
+                    d="M3.196 12.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 12.87z">
+                  </path>
+                  <path
+                    d="M3.196 8.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 8.87z">
+                  </path>
+                  <path
+                    d="M10.38 1.103a.75.75 0 00-.76 0l-7.25 4.25a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.76 0l7.25-4.25a.75.75 0 000-1.294l-7.25-4.25z">
+                  </path>
+                </svg>Improved Air Quality: </dt>
+              <dd class="inline">Plants on roof gardens filter pollutants from the air, such as carbon dioxide, particulate matter, and other airborne toxins, thereby improving air quality in urban areas.
+              </dd>
+            </div>
+           
+          </dl>
+        </div>
+        
+      </div>
+      <img src="features-of-roof-garden.png" alt="features of roof garden " class="rounded-lg shadow-2xl mt-20">
+    </div>
+  </div>
+</section>
+<section class="overflow-hidden bg-white py-8 sm:py-16 animate-fade-in zoom-in-out">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+              <img src="roof-garden-image.png" alt=" Benefit of roof garden" class="rounded-lg shadow-2xl mt-20 mb-0">
+
+      <div class="lg:pr-8 lg:pt-4 ">
+        <div class="lg:max-w-lg  ">
+          <!-- <h2 class="text-base font-semibold leading-7 text-indigo-600">Produce faster</h2> -->
+          <p class="mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl">Benefits</p>
+          <p class="mt-6 text-lg leading-8 text-black-600">
+              Roof gardens, or green roofs, provide numerous benefits, enhancing urban living and sustainability. 
+          </p>
+          <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-black-600 lg:max-w-none">
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-black"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="bg-gradient-to-r from-green-400" aria-hidden="true"
+                  class="absolute left-1 top-1 h-5 w-5 text-indigo-600">
+                  <path fill-rule="evenodd"
+                    d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
+                    clip-rule="evenodd"></path>
+                </svg>Energy Efficiency:
+              </dt>
+              <dd class="inline">Green roofs provide natural insulation, reducing the need for indoor heating in winter and cooling in summer, which can lead to significant energy savings.
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="" aria-hidden="true"
+                  class="absolute left-1 top-1 h-5 w-5 text-indigo-600">
+                  <path fill-rule="evenodd"
+                    d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                Social and Health Benefits:
+              </dt>
+              <dd class="inline">Access to green spaces has been linked to reduced stress levels and improved mental well-being.</dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-black"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill=" "aria-hidden="true"
+                  class="absolute left-1 top-1 h-5 w-5 text-indigo-600">
+                  <path fill-rule="evenodd"
+                    d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
+                    clip-rule="evenodd"></path>
+                </svg>Long-Term Benefits for Buildings </dt>
+              <dd class="inline">Green roofs protect roofing materials from UV radiation, temperature extremes, and mechanical damage, extending the lifespan of the roof.
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-black"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="" aria-hidden="true"
+                  class="absolute left-1 top-1 h-5 w-5 text-indigo-600">
+                  <path fill-rule="evenodd"
+                    d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
+                    clip-rule="evenodd"></path>
+                </svg>Sustainability and Urban Resilience </dt>
+              <dd class="inline">They contribute to water conservation efforts by reducing water runoff and supporting sustainable urban water management practices.                </dd>
+            </div>
+           
+          </dl>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+</div> <br>
+<!-- Contact section -->
+
+
+
+<!-- footer section -->
+
+
+<footer class="animate-fade-in  bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br"  >
+  <div class="mx-auto w-full max-w-screen-xl">
+    <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+      <div>
+          <img src="thank-your-garden-logo.webp" alt="" ><br>
+          <p> A roof garden transforms an often underutilized space atop a building into a vibrant, functional area. </p> <br>
+          <ul class="text-black dark:text-black font-medium">
+              <li class="mb-4">
+                  <a href="#" class=" hover:underline"><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
+                  <a href="#" class=" hover:underline"><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;
+                  <a href="#" class=" hover:underline"><i class="bi bi-twitter"></i></a>&nbsp;&nbsp;
+                  <a href="#" class=" hover:underline"><i class="bi bi-youtube"></i></a>
+              </li>
+             
+          </ul>
+      </div>
+      <div>
+          <h2 class="mb-6 text-sm font-semibold text-black uppercase ">Contact Us</h2>
+          <ul class="text-black  font-medium">
+              <li class="mb-4">
+                  <a href="#" class="">Phone:080722 45806</a>
+              </li>
+              <li class="mb-4">
+                  <a href="#" class="">Email:roofgardeninfo@gmail.com</a>
+              </li>
+              <li class="mb-4">
+                  <a href="#" class=""><Address>Address:301 Third floor, Real Enclave, Josier St, Tirumurthy Nagar, Nungambakkam, Chennai, Tamil Nadu 600034</Address></a>
+              </li>
+              <li class="mb-4">
+                  <a href="#" class="">Time:Mon-Sat(10am-pm) Sun closed  </a>
+              </li>
+          </ul>
+      </div>
+      <div>
+          <h2 class="mb-6 text-sm font-semibold text-black uppercase ">Resources</h2>
+          <ul class="text-black  font-medium">
+              <li class="mb-4">
+                  <a href="#home" class="hover:underline"> <i class="bi bi-caret-right-fill"></i>Home</a>
+              </li>
+              <li class="mb-4">
+                  <a href="#our-service" class="hover:underline"><i class="bi bi-caret-right-fill"></i>Our Services</a>
+              </li>
+              <li class="mb-4">
+                  <a href="showcase.html" class="hover:underline"><i class="bi bi-caret-right-fill"></i>Showcases</a>
+              </li>
+              <li class="mb-4">
+                  <a href="#features-benefits" class="hover:underline"><i class="bi bi-caret-right-fill"></i>Features & Benefits</a>
+              </li>
+              <li class="mb-4">
+                  <a href="contact.html" class="hover:underline"><i class="bi bi-caret-right-fill"></i>Contacts</a>
+              </li>
+          </ul>
+      </div>
+      <div>
+          <h2 class="mb-6 text-sm font-semibold text-black uppercase ">Get free Estimate</h2>
+          <ul class="text-black  font-medium">
+              <li class="mb-4">
+                  
+                    <p><i class="bi bi-telephone-fill"></i>080722 45806</p>
+                      
+              </li>
+              <li class="mb-4">
+                Contact us now for a quote on your garden ( We are Support 24/7 )
+              </li>
+              
+             
+          </ul>
+      </div>
+  </div>
+  <div class="px-4 py-6   md:flex md:items-center md:justify-between">
+      <span class="text-sm text-black sm:text-center">© 2024 <a href="">Roof Garden designed by adsyzygy pvt ltd</a>. All Rights Reserved.
+      </span>
+      <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+          <a href="#" class="text-black hover:text-black ">
+                Sitemap
+            </a>
+            <a href="privacy-policy.html" class="text-black hover:text-black ">
+              <i class="bi bi-dot"></i>Privacy-Policy
+               
+            </a>
+            <a href="terms-condition.html" class="text-black hover:text-black ">
+              <i class="bi bi-dot"></i>Terms-condition
+            </a>
+           
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+  </body>
+
+  </html>

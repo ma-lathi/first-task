@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roof Garden</title>
+   <link rel="stylesheet" href="src/output.css">
+   <link
+   rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+  />
+ 
+    <style>
+       
+    /* Define custom animation classes */
+   /* Inside your CSS file */
+@keyframes fade-in {
+   
+   
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.8s ease-in-out;
+}
+html{
+    scroll-behavior: smooth;
+}
+#a{
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+    }
+    </style>
+ 
+</head>
+
+<body class="bg-white">
+
+
+    <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 animate-fade-in">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="thank-your-garden-logo.webp" class="h-15" alt="Garden theme">
+          </a>
+          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <a href="contact.html"> <button type="button" class="  text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Contact Us</button></a>
+            <button type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false" onclick="toggleMenu()">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+            </button>
+          </div>
+          <div id="navbar-sticky" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
+              <li>
+                <a href="index.html#home" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="index.html#our-service" class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Our Services</a>
+              </li>
+              <li>
+                <a href="showcase.html" class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Showcases</a>
+              </li>
+              <li>
+                <a href="index.html#features-benefits" class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Features & Benefits</a>
+              </li>
+              <li>
+                <a href="contact.html" target="_blank"    class="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <script>
+        function toggleMenu() {
+          const menu = document.getElementById('navbar-sticky');
+          const expanded = menu.getAttribute('aria-expanded') === 'true' || false;
+          menu.setAttribute('aria-expanded', !expanded);
+          menu.classList.toggle('hidden');
+        }
+      </script>
+      
+      
+     
+    <!-- Main Content Section -->
+    <div class="relative px-6 pt-32 pb-20 lg:px-8 animate-fade-in">
+        <!-- Your content here -->
+        <div class="mx-auto max-w-2xl">
+            <div class="mb-8 flex justify-center lg:hidden">
+                <!-- Announcement Banner (if any) -->
+                <!-- <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-black-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                    Announcing our next round of funding.
+                    <a href="#" class="font-semibold text-indigo-600">
+                        <span class="absolute inset-0" aria-hidden="true"></span>Read more <span
+                            aria-hidden="true">&rarr;</span>
+                    </a>
+                </div> -->
+            </div>
+
+           
+        <!-- Background Shapes -->
+        <div class="absolute inset-x-0 bottom-0 -z-10 transform-gpu overflow-hidden blur-3xl">
+            <div class="left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Background Shapes -->
+    <div class="absolute inset-x-0 bottom-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl">
+        <div class="left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div> 
+<!-- contact section -->
+
+
+
+<div class="" id="contact">
+        
+  <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 grid md:grid-cols-2 lg:grid-cols-2 gap-y-8 md:gap-x-8 md:gap-y-8 lg:gap-x-8 lg:gap-y-16">
+      <div>
+          <h2 class="text-lg font-extrabold ">To make requests for
+              further information,
+              contact us via our
+              social channels.</h2>
+          <p class="max-w-sm mt-4 mb-4 dark:text-black">We just need a couple of hours!
+              No more than 2 working days since receiving your
+              issue ticket..</p>
+          <div class="flex items-center mt-8 space-x-2 text-dark-600 dark:text-black">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" aria-hidden="true" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z">
+                  </path>
+              </svg><span>Tirumurthy Nagar, Nungambakkam, Chennai,</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-dark-600 dark:text-black">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" aria-hidden="true" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75">
+                  </path>
+              </svg>
+              <a href="mailto:hello@company.com">info@adsyzygy.com</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-dark-600 dark:text-black">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" aria-hidden="true" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z">
+                  </path>
+              </svg>
+              <a href="tel:11111111111">080722 45806</a>
+          </div> <br>
+         <div>
+                    <ul class="text-black dark:text-black font-medium">
+                        <li class="mb-4">
+                            <a href="#" class=" hover:underline"><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
+                            <a href="#" class=" hover:underline"><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;
+                            <a href="#" class=" hover:underline"><i class="bi bi-twitter"></i></a>&nbsp;&nbsp;
+                            <a href="#" class=" hover:underline"><i class="bi bi-youtube"></i></a>
+                        </li>
+                       
+                    </ul>
+                </div>
+      </div>
+      <div>
+          <form  action="https://formspree.io/f/mblrogzr" method="post">
+              <input type="checkbox" id="" class="hidden" style="display:none" name="botcheck">
+              <div class="mb-5">
+                  <input type="text" placeholder="Full Name" autocomplete="false"
+                      class="w-full px-4 py-3 border-2 placeholder:text-black-800 dark:text-white rounded-md outline-none dark:placeholder:text-black-200 dark:bg-gray-900 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
+                      name="name">
+              </div>
+              <div class="mb-5">
+                  <label for="email_address" class="sr-only">Email Address</label>
+                  <input id="email_address" type="email" placeholder="Email Address" autocomplete="false"
+                      class="w-full px-4 py-3 border-2 placeholder:text-black-800 dark:text-white rounded-md outline-none dark:placeholder:text-black-200 dark:bg-gray-900   focus:ring-4  border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
+                      name="email">
+              </div>
+              <div class="mb-5">
+                  <label for="email_address" class="sr-only">Subject</label>
+                  <input id="email_address" type="text" placeholder="Subject" autocomplete="false"
+                      class="w-full px-4 py-3 border-2 placeholder:text-black-800 dark:text-white rounded-md outline-none dark:placeholder:text-black-200 dark:bg-gray-900   focus:ring-4  border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
+                      name="text">
+              </div>
+              <div class="mb-3">
+                  <textarea placeholder="Your Message"
+                      class="w-full px-4 py-3 border-2 placeholder:text-black-800 dark:text-white dark:placeholder:text-black-200 dark:bg-gray-900   rounded-md outline-none  h-36 focus:ring-4  border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
+                      name="message">
+                  </textarea>
+              </div>
+              <button type="submit"
+                  class="w-full py-4 font-semibold text-white transition-colors bg-gray-900 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-offset-2 focus:ring focus:ring-gray-200 px-7 dark:bg-white dark:text-black ">Send
+                  Message
+              </button>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+    <!-- footer section -->
+    
+
+
+    <footer class="animate-fade-in  bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br"  >
+      <div class="mx-auto w-full max-w-screen-xl">
+        <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+          <div>
+              <img src="thank-your-garden-logo.webp" alt="" ><br>
+              <p> A roof garden transforms an often underutilized space atop a building into a vibrant, functional area. </p> <br>
+              <ul class="text-black dark:text-black font-medium">
+                  <li class="mb-4">
+                      <a href="#" class=" hover:underline"><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;
+                      <a href="#" class=" hover:underline"><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;
+                      <a href="#" class=" hover:underline"><i class="bi bi-twitter"></i></a>&nbsp;&nbsp;
+                      <a href="#" class=" hover:underline"><i class="bi bi-youtube"></i></a>
+                  </li>
+                 
+              </ul>
+          </div>
+          <div>
+              <h2 class="mb-6 text-sm font-semibold text-black uppercase ">Contact Us</h2>
+              <ul class="text-black  font-medium">
+                  <li class="mb-4">
+                      <a href="#" class="">Phone:080722 45806</a>
+                  </li>
+                  <li class="mb-4">
+                      <a href="#" class="">Email:roofgardeninfo@gmail.com</a>
+                  </li>
+                  <li class="mb-4">
+                      <a href="#" class=""><Address>Address:301 Third floor, Real Enclave, Josier St, Tirumurthy Nagar, Nungambakkam, Chennai, Tamil Nadu 600034</Address></a>
+                  </li>
+                  <li class="mb-4">
+                      <a href="#" class="">Time:Mon-Sat(10am-pm) Sun closed  </a>
+                  </li>
+              </ul>
+          </div>
+          <div>
+              <h2 class="mb-6 text-sm font-semibold text-black uppercase ">Resources</h2>
+              <ul class="text-black  font-medium">
+                  <li class="mb-4">
+                      <a href="index.html#home" class="hover:underline"> <i class="bi bi-caret-right-fill"></i>Home</a>
+                  </li>
+                  <li class="mb-4">
+                      <a href="index.html#our-service" class="hover:underline"><i class="bi bi-caret-right-fill"></i>Our Services</a>
+                  </li>
+                  <li class="mb-4">
+                      <a href="showcase.html" class="hover:underline"><i class="bi bi-caret-right-fill"></i>Showcases</a>
+                  </li>
+                  <li class="mb-4">
+                      <a href="index.html#features-benefits" class="hover:underline"><i class="bi bi-caret-right-fill"></i>Features & Benefits</a>
+                  </li>
+                  <li class="mb-4">
+                      <a href="contact.html" class="hover:underline"><i class="bi bi-caret-right-fill"></i>Contacts</a>
+                  </li>
+              </ul>
+          </div>
+          <div>
+              <h2 class="mb-6 text-sm font-semibold text-black uppercase ">Get free Estimate</h2>
+              <ul class="text-black  font-medium">
+                  <li class="mb-4">
+                      
+                        <p><i class="bi bi-telephone-fill"></i>080722 45806</p>
+                          
+                  </li>
+                  <li class="mb-4">
+                    Contact us now for a quote on your garden ( We are Support 24/7 )
+                  </li>
+                  
+                 
+              </ul>
+          </div>
+      </div>
+      <div class="px-4 py-6   md:flex md:items-center md:justify-between">
+          <span class="text-sm text-black sm:text-center">© 2024 <a href="">Roof Garden designed by adsyzygy pvt ltd</a>. All Rights Reserved.
+          </span>
+          <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+              <a href="#" class="text-black hover:text-black ">
+                    Sitemap
+                </a>
+                <a href="#" class="text-black hover:text-black ">
+                  <i class="bi bi-dot"></i>Privacy-Policy
+                   
+                </a>
+                <a href="#" class="text-black hover:text-black ">
+                  <i class="bi bi-dot"></i>Terms-condition
+                </a>
+               
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  </body>
+  </html>
+   
